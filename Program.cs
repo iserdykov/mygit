@@ -4,6 +4,7 @@ using Serilog;
 using S;
 using B;
 using S;
+using git;
 
 namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
 {
@@ -42,4 +43,5 @@ namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
 
     }
 }
-
+#Left and Right test rebase
+#More add comment
