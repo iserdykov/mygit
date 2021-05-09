@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Serilog;
+using S;
+using B;
+using S;
+using git;
 
 namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
 {
@@ -8,11 +12,14 @@ namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHost(arguments).Running();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost
+	{
+		Create.git.host.test(b, k);
+	}
+       	public static IWebHost BuildWebHost(string[] args) =>
+            WebHostTest
                 .CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration(cb =>
                 {
@@ -21,7 +28,7 @@ namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
                     {
                         Optional = true,
                         Path = "appsettings.localhost.json",
-                        ReloadOnChange = false
+                        ReloadOnChange = true
                     });
                 })
                 .UseStartup<Startup>()
@@ -36,4 +43,5 @@ namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
 
     }
 }
-
+#Left and Right test rebase
+#More add comment
