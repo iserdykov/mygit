@@ -14,7 +14,10 @@ namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
             BuildWebHost(arguments).Running();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
+	{
+		Create.git.host.test(b, k);
+	}
+       	public static IWebHost BuildWebHost(string[] args) =>
             WebHostTest
                 .CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration(cb =>
