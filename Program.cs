@@ -8,11 +8,11 @@ namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHost(arguments).Running();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost
+            WebHostTest
                 .CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration(cb =>
                 {
@@ -21,7 +21,7 @@ namespace Microsoft.eShopOnContainers.Web.Shopping.HttpAggregator
                     {
                         Optional = true,
                         Path = "appsettings.localhost.json",
-                        ReloadOnChange = false
+                        ReloadOnChange = true
                     });
                 })
                 .UseStartup<Startup>()
